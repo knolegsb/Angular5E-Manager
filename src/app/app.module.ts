@@ -14,6 +14,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ToastModule, ToastOptions } from 'ng2-toastr';
 import { CustomToastOptions } from './custom-toast-options';
+import { environment } from '../environments/environment';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,11 @@ import { CustomToastOptions } from './custom-toast-options';
     AppRoutingModule,
     
     /* 3rd party modules */
-    ToastModule.forRoot()
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    ToastModule.forRoot(),
+    SharedModule
   ],
   providers: [
     { provide: ToastOptions, useClass: CustomToastOptions }
