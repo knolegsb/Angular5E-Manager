@@ -12,6 +12,8 @@ import { ProductModule } from './product/product.module';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
+import { ToastModule, ToastOptions } from 'ng2-toastr';
+import { CustomToastOptions } from './custom-toast-options';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,14 @@ import { AppRoutingModule } from './app-routing.module';
     ScmMainModule,
     ProductModule,
     CategoryModule,
-    AppRoutingModule
+    AppRoutingModule,
     
+    /* 3rd party modules */
+    ToastModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    { provide: ToastOptions, useClass: CustomToastOptions }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

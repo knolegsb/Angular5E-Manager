@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef } from '@angular/core';
 import { SidebarMenu } from './scm-main/sidebar/sidebar.component';
+import { ToastsManager } from 'ng2-toastr';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,8 @@ import { SidebarMenu } from './scm-main/sidebar/sidebar.component';
 })
 export class AppComponent {
   currentMenu: SidebarMenu;
+
+  constructor(private toastr: ToastsManager, vRef: ViewContainerRef) {
+    this.toastr.setRootViewContainerRef(vRef);
+  }
 }
