@@ -5,11 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainDashboardComponent } from './scm-main/main-dashboard/main-dashboard.component';
 import { ProductComponent } from './product/product.component';
 import { CategoryComponent } from './category/category.component';
+import { PageNotFoundComponent } from './scm-main/page-not-found/page-not-found.component';
 
-const routes: Routes = [
-  { path: "home", component: MainDashboardComponent },
-  { path: "product", component: ProductComponent },
-  { path: "category", component: CategoryComponent }
+const routes: Routes = [  
+  { path: "product-list", component: ProductComponent },
+  { path: "category-list", component: CategoryComponent },
+  { path: "total-summary", component: MainDashboardComponent },
+  { path: "", redirectTo: 'total-summary', pathMatch: 'full' },
+  { path: "**", component: PageNotFoundComponent }
 ];
 
 @NgModule({
