@@ -7,6 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './scm-main/navbar/navbar.component';
 import { ScmMainModule } from './scm-main/scm-main.module';
+import { CategoryModule } from './category/category.module';
+import { ProductModule } from './product/product.module';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -20,9 +24,14 @@ import { ScmMainModule } from './scm-main/scm-main.module';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
+    RouterModule,
 
     /* app modules */
-    ScmMainModule
+    ScmMainModule,
+    ProductModule,
+    CategoryModule,
+    AppRoutingModule
     
   ],
   providers: [],
