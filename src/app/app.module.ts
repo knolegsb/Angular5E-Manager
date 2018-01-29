@@ -5,11 +5,14 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './scm-main/navbar/navbar.component';
+import { ScmMainModule } from './scm-main/scm-main.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    //NavbarComponent
   ],
   imports: [
     /* angular modules */
@@ -19,6 +22,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
 
     /* app modules */
+    ScmMainModule
     
   ],
   providers: [],
