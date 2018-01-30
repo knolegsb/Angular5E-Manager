@@ -1,7 +1,7 @@
 <scm-navbar></scm-navbar>
 <div class="container-fluid">
     <div class="row">
-        <scm-sidebar class="col-4" (changedMenu)="currentMenu = $event"></scm-sidebar>
+        <scm-sidebar class="col-3" (changedMenu)="currentMenu = $event"></scm-sidebar>
         <main class="col-8" [ngSwitch]="currentMenu">
             <!-- <div *ngSwitchCase="'product'">
                 <scm-product-management></scm-product-management>

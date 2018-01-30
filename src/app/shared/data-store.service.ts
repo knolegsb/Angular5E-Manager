@@ -38,7 +38,7 @@ export class DataStoreService {
         return this.findObject$(domain, model.no).update(model);
     }
 
-    const(domain: ScmDomain) {
+    count(domain: ScmDomain) {
         return this.counter.get(domain);
     }
 }
