@@ -7,12 +7,14 @@ import { CategoryRoutingModule } from './category-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CategoryItemComponent } from './category-management/category-item/category-item.component';
 import { CAT_LIST_PAGE_SIZE } from './category.tokens';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     CommonModule,
     CategoryRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbPaginationModule
   ],
   declarations: [CategoryComponent,
     CategoryManagementComponent,

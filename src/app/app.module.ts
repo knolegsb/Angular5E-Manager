@@ -20,6 +20,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { SharedModule } from './shared/shared.module';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { SharedModule } from './shared/shared.module';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     ToastModule.forRoot(),
-    SharedModule
+    SharedModule,
+    NgbPaginationModule.forRoot()
   ],
   providers: [
     { provide: ToastOptions, useClass: CustomToastOptions }

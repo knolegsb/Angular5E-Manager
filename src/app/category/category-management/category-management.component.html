@@ -12,6 +12,7 @@
     </div>
   </div>
   <div class="row justify-content-center mt-4">
-    
+    <ngb-pagination [pageSize]="pageSize" [collectionSize]="totalItemCnt" 
+      [maxSize]="10" [ellipses]="false" [page]="pageNo" (pageChange)="pageNoChanged($event)"></ngb-pagination>
   </div>
 </div>
